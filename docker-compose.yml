@@ -8,3 +8,33 @@ services:
     volumes:
       - ./server:/srv:cached
     working_dir: /srv
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8
+    container_name: springboot-mysql
+    volumes:
+      - ./mysql/sql_init/:/docker-entrypoint-initdb.d
+      - ./mysql/log/:/var/lib/mysql
+      - ./mysql/sql_init/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - 3326:3306
+    environment:
+      MYSQL_DATABASE: "sample" # この場合sampleというデータベースが作成されます
+      MYSQL_ROOT_USER: "root" # rootユーザーはパスワードを設定しないとエラーでます
+      MYSQL_ROOT_PASSWORD: "root"
+      TZ: "Asia/Tokyo"
+
+  front:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: vue-fornt
+    ports:
+      - 8089:8080
+    volumes:
+      - ./front:/front
+    tty: true
+    stdin_open: true
+
