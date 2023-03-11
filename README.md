@@ -10,6 +10,14 @@ docker-compose up -d
 ```
 docker-compose exec app bash
 ```
+jarファイルの```build```
+```
+sh gradlew build
+```
+jarの起動
+```
+java -jar build/libs/app-0.0.1-SNAPSHOT.jar
+```
 
 ## 機能
 
