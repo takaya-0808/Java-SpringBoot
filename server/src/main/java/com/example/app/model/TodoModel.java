@@ -111,6 +111,6 @@ public class TodoModel {
     }
 
     public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate
+        this.updateDate = updateDate;
     }
 }
