@@ -103,7 +103,7 @@ public class TodoModel {
     }
 
     public void setCreateDate(Date createDate) {
-        this.creationDate = createDate
+        this.creationDate = createDate;
     }
 
     public Date getUpdateDate() {
