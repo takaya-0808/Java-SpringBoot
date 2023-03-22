@@ -1,12 +1,12 @@
 version: '3.6'
 services:
   app:
-    image: openjdk:8
+    image: openjdk:17
     ports:
       - 8085:8080
     tty: true
     volumes:
-      - ./app:/srv:cached
+      - ./todo:/srv:cached
     working_dir: /srv
     depends_on:
       - mysql
