@@ -20,4 +20,16 @@ public class Todo {
     @Temporal(value=Temporal.TIMESTAMP)
     private Date createdDateTime;
 
+    @Column(nullable=true)
+    @Temporal(value=Temporal.TIMESTAMP)
+    private Date updatedDateTime;
+
+    @Column(nullable=false)
+    private Boolean archived;
+
+    @Column(nullable=false)
+    private Boolean completed;
+
+    
+
 }
