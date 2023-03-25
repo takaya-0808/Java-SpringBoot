@@ -1,33 +1,15 @@
 package com.example.todo.model;
 
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
 public class Todo {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer ID;
-
-    @Column(nullable=false, length=50)
+    private Long id;
     private String title;
-
-    @Column(nullable=false, length=500)
-    private String content;
-
-    @Column(nullable=false)
-    @Temporal(value=Temporal.TIMESTAMP)
-    private Date createdDateTime;
-
-    @Column(nullable=true)
-    @Temporal(value=Temporal.TIMESTAMP)
-    private Date updatedDateTime;
-
-    @Column(nullable=false)
+    private String context;
+    private Date createDateTime;
+    private Date updateDateTime;
     private Boolean archived;
-
-    @Column(nullable=false)
     private Boolean completed;
 
     
