@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Todo {
 
-    private Long id;
+    private int id;
     private String title;
     private String content;
     private Date createDateTime;
@@ -12,11 +12,11 @@ public class Todo {
     private Boolean archived;
     private Boolean completed;
 
-    public Long getId() {
+    public int getId() {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -29,7 +29,7 @@ public class Todo {
     }
 
     public String getContent() {
-        return this.content
+        return this.content;
     }
 
     public void setContent(String content) {
@@ -40,7 +40,7 @@ public class Todo {
         return this.createDateTime;
     }
 
-    public void setreateDateTime(Date time) {
+    public void setCreateDateTime(Date time) {
         this.createDateTime = time;
     }
 
