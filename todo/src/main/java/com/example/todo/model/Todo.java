@@ -68,4 +68,10 @@ public class Todo {
         this.completed = completed;
     }
 
+    @Override
+    public String toString() {
+        return "Todo List:"
+                + "Todo title = " + this.getTitle()
+                + "Todo content = " + this.getContent();
+    }
 }
