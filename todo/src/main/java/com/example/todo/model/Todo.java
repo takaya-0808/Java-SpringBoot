@@ -36,20 +36,36 @@ public class Todo {
         this.content = content;
     }
 
-    public Date getCreateDateTime() {}
+    public Date getCreateDateTime() {
+        return this.createDateTime;
+    }
 
-    public void setreateDateTime(Date time) {}
+    public void setreateDateTime(Date time) {
+        this.createDateTime = time;
+    }
 
-    public Date getUpdateDateTime() {}
+    public Date getUpdateDateTime() {
+        return this.updateDateTime;
+    }
 
-    public void setUpdateDateTime(Date time) {}
+    public void setUpdateDateTime(Date time) {
+        this.updateDateTime = time;
+    }
 
-    public Boolean getArchived() {}
+    public Boolean getArchived() {
+        return this.archived;
+    }
 
-    public void setArchived(Boolean archived) {}
+    public void setArchived(Boolean archived) {
+        this.archived = archived;
+    }
 
-    public Boolean getCompleted() {}
+    public Boolean getCompleted() {
+        return this.completed;
+    }
 
-    public void setCompleted(Boolean completed) {}
+    public void setCompleted(Boolean completed) {
+        this.completed = completed;
+    }
 
 }
