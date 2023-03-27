@@ -15,7 +15,7 @@ public class TodoController {
         return "Hello World";
     }
 
-    @GetMapping(value="/task/{todoId}")
+    @DeleteMapping(value="/task/{todoId}")
     public String deleteTask(@PathVariable(value="todoId") Long id) {
         return "Task Delete ID" + String.valueOf(id);
     }
@@ -31,7 +31,10 @@ public class TodoController {
         return ToDo;
     }
 
-    // @GetMapping(value="/task")
+    @GetMapping(value="/task")
+    public List<Todo> getAllTodoTask() {
+
+    }
 
 
 }
