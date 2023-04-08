@@ -9,7 +9,6 @@ public class Todo {
     private String content;
     private Date createDateTime;
     private Date updateDateTime;
-    private Boolean archived;
     private Boolean completed;
 
     public int getId() {
@@ -52,13 +51,13 @@ public class Todo {
         this.updateDateTime = time;
     }
 
-    public Boolean getArchived() {
-        return this.archived;
-    }
+    // public Boolean getArchived() {
+    //     return this.archived;
+    // }
 
-    public void setArchived(Boolean archived) {
-        this.archived = archived;
-    }
+    // public void setArchived(Boolean archived) {
+    //     this.archived = archived;
+    // }
 
     public Boolean getCompleted() {
         return this.completed;
