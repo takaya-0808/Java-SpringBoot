@@ -5,11 +5,14 @@ import java.util.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.web.bind.annotation.*;
 import com.example.todo.model.Todo;
-import com.example.todo.service.TodoService;
+import com.example.todo.repository.Repository.TodoRepository;
 
 @RestController
 @RequestMapping("/todo/api")
 public class TodoController {
+
+    @Autowired
+    private TodoRepository todoRepository;
     
     @RequestMapping("/")
     String home() {
@@ -22,15 +25,17 @@ public class TodoController {
         ToDo.setId(1);
         ToDo.setTitle("hoge");
         ToDo.setContent("hoge.hoge.hoge");
-        // ToDo.setCreateDateTime(2022/03/04);
-        // ToDo.set
         return ToDo;
     }
 
     @GetMapping(value="/task")
     public String getAllTodoTask() {
         return "hoge";
-        // return TodoService.getTodoTask();
+    }
+
+    @GetMapping("/task/{id}")
+    public Todo findById(@PathVariable int id) {
+        return todoRepository.findById(id);
     }
 
     @DeleteMapping(value="/task/{todoId}")
