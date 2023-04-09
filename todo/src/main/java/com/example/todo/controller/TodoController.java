@@ -24,8 +24,8 @@ public class TodoController {
         return todoRepository.findById(id);
     }
 
-    @DeleteMapping(value="/task/{todoId}")
-    public String deleteTask(@PathVariable(value="todoId") Long id) {
+    @DeleteMapping("/task/{id}")
+    public String deleteTask(@PathVariable Long id) {
         return "Task Delete ID" + String.valueOf(id);
     }
 
