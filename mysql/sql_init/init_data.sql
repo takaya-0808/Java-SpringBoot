@@ -9,3 +9,14 @@ CREATE TABLE user(
 );
 
 INSERT INTO user(user_name, password) VALUES('user', 'password');
+
+
+CREATE TABLE todo (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    title VARCHAR(50),
+    content VARCHAR(500),
+    completed BOOLEAN, 
+    PRIMARY KEY(id)
+);
+
+INSERT INTO todo(title, content, completed) VALUES('user', 'password', true);
