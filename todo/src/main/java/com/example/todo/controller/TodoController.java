@@ -19,20 +19,6 @@ public class TodoController {
         return "Hello World";
     }
 
-    @GetMapping(value="/hello")
-    public Todo todo() {
-        Todo ToDo = new Todo();
-        ToDo.setId(1);
-        ToDo.setTitle("hoge");
-        ToDo.setContent("hoge.hoge.hoge");
-        return ToDo;
-    }
-
-    @GetMapping(value="/task")
-    public String getAllTodoTask() {
-        return "hoge";
-    }
-
     @GetMapping("/task/{id}")
     public Todo findById(@PathVariable int id) {
         return todoRepository.findById(id);
