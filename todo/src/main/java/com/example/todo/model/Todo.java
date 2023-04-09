@@ -51,14 +51,6 @@ public class Todo {
         this.updateDateTime = time;
     }
 
-    // public Boolean getArchived() {
-    //     return this.archived;
-    // }
-
-    // public void setArchived(Boolean archived) {
-    //     this.archived = archived;
-    // }
-
     public Boolean getCompleted() {
         return this.completed;
     }
