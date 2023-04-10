@@ -7,8 +7,8 @@ public class Todo {
     private int id;
     private String title;
     private String content;
-    private Date createDateTime;
-    private Date updateDateTime;
+    // private Date createDateTime;
+    // private Date updateDateTime;
     private Boolean completed;
 
     public int getId() {
@@ -35,21 +35,21 @@ public class Todo {
         this.content = content;
     }
 
-    public Date getCreateDateTime() {
-        return this.createDateTime;
-    }
+    // public Date getCreateDateTime() {
+    //     return this.createDateTime;
+    // }
 
-    public void setCreateDateTime(Date time) {
-        this.createDateTime = time;
-    }
+    // public void setCreateDateTime(Date time) {
+    //     this.createDateTime = time;
+    // }
 
-    public Date getUpdateDateTime() {
-        return this.updateDateTime;
-    }
+    // public Date getUpdateDateTime() {
+    //     return this.updateDateTime;
+    // }
 
-    public void setUpdateDateTime(Date time) {
-        this.updateDateTime = time;
-    }
+    // public void setUpdateDateTime(Date time) {
+    //     this.updateDateTime = time;
+    // }
 
     public Boolean getCompleted() {
         return this.completed;
