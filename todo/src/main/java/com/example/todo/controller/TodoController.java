@@ -20,11 +20,14 @@ public class TodoController {
         return "Hello World";
     }
 
-    
+    @GetMapping("/task")
+    public List<Todo> GetAllTask() {
+        return todoRepository.findAll();
+    }
 
     // 全てのタスクを取得する
     @GetMapping("/task/{id}")
-    public Todo findById(@PathVariable int id) {
+    public Todo GetOneTask(@PathVariable int id) {
         return todoRepository.findById(id);
     }
 
