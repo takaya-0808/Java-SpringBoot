@@ -2,10 +2,11 @@ package com.example.todo.controller;
 
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.web.bind.annotation.*;
 import com.example.todo.model.Todo;
-import com.example.todo.repository.Repository.TodoRepository;
+import com.example.todo.repository.TodoRepository;
 
 @RestController
 @RequestMapping("/todo/api")
