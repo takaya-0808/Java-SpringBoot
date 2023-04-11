@@ -15,9 +15,9 @@ services:
     image: mysql/mysql-server:8.0
     container_name: springboot-mysql
     volumes:
-      - ./mysql/sql_init/:/docker-entrypoint-initdb.d
       - ./mysql/log/:/var/lib/mysql
       - ./mysql/sql_init/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql/sql_init/init_data.sql:/docker-entrypoint-initdb.d/init_data.sql
     ports:
       - 3326:3306
     environment:
