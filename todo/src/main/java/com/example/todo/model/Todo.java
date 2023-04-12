@@ -65,4 +65,10 @@ public class Todo {
                 + "Todo title = " + this.getTitle()
                 + "Todo content = " + this.getContent();
     }
+
+    public Todo(String title, String content, Boolean completed) {
+        this.title = title;
+        this.content = content;
+        this.completed = completed;
+    }
 }
