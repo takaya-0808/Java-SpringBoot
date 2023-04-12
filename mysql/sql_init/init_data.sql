@@ -20,3 +20,4 @@ CREATE TABLE todo (
 );
 
 INSERT INTO todo(title, content, completed) VALUES('user', 'password', true);
+INSERT INTO todo(title, content, completed) VALUES('hoge', 'hogehoge', false);
