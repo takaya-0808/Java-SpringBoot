@@ -23,6 +23,11 @@ public class TodoRepositoryImpl implements TodoRepository {
     }
 
     @Override
+    public int saveTask(Todo todo) {
+        return jdbcTemplate.update("insert into todo(title, content, completed) values(?, ?, ?)", new Object[] {todo.getTitle(), todo.getContent(), todo.getCompleted()});
+    }
+
+    @Override
     public List<Todo> findAll() {
         RowMapper<Todo> rowMapper = new BeanPropertyRowMapper<Todo>(Todo.class);
         return jdbcTemplate.query("select * from todo", rowMapper);
