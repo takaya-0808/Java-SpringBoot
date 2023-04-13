@@ -33,4 +33,10 @@ public class TodoRepositoryImpl implements TodoRepository {
         return jdbcTemplate.query("select * from todo", rowMapper);
     }
 
+    @Override
+    public int editTask(Todo todo, int id) {return -1;}
+
+    @Override
+    public int deleteTask(int id) {return -1;}
+
 }
