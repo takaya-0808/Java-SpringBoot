@@ -38,9 +38,9 @@ public class TodoController {
     }
 
     // 特定のタスクを編集
-    @@PutMapping("/task/{id}")
-    public int editTask(`PathVariable int id) {
-        return todoRepository.editTask(id);
+    @PutMapping("/task/{id}")
+    public int editTask(@PathVariable int id, @RequestBody Todo todo) {
+        return todoRepository.editTask(todo, id);
     }
 
     // 特定のタスクを削除
