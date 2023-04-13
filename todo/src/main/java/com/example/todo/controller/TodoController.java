@@ -39,7 +39,7 @@ public class TodoController {
 
     // 特定のタスクを編集
     @PutMapping("/task/{id}")
-    public int editTask(@PathVariable int id, @RequestBody Todo todo) {
+    public int editTask(@RequestBody Todo todo, @PathVariable int id) {
         return todoRepository.editTask(todo, id);
     }
 
