@@ -9,4 +9,6 @@ public interface TodoRepository {
     public Todo findById(int id);
     public List<Todo> findAll();
     public int saveTask(Todo todo);
+    public int editTask(Todo todo);
+    public int deleteTask(Todo todo);
 }
