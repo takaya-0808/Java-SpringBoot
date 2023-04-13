@@ -34,9 +34,13 @@ public class TodoRepositoryImpl implements TodoRepository {
     }
 
     @Override
-    public int editTask(Todo todo, int id) {return -1;}
+    public int editTask(Todo todo, int id) {
+        return jdbcTemplate.update("update todo set title=?, content=?, completed=? where id=?", new Object[] {todo.getTitle(), todo.getContent(), todo.getCompleted(), id});
+    }
 
     @Override
-    public int deleteTask(int id) {return -1;}
+    public int deleteTask(int id) {
+        return jdbcTemplate.update("delete from todo where id=?", id);
+    }
 
 }
