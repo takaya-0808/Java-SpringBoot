@@ -37,10 +37,16 @@ public class TodoController {
         return todoRepository.findById(id);
     }
 
+    // 特定のタスクを編集
+    @@PutMapping("/task/{id}")
+    public int editTask(`PathVariable int id) {
+        return todoRepository.editTask(id);
+    }
+
     // 特定のタスクを削除
     @DeleteMapping("/task/{id}")
-    public String deleteTask(@PathVariable Long id) {
-        return "Task Delete ID" + String.valueOf(id);
+    public int deleteTask(@PathVariable int id) {
+        return todoRepository.deleteTask(id);
     }
 
 
