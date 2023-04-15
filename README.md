@@ -22,6 +22,8 @@ java -jar build/libs/app-0.0.1-SNAPSHOT.jar
 ## プレビュー
 [確認](http://localhost:8085/todo/api/)
 
+## URL: http://localhost:8085/todo/api/
+
 ## 機能
 
 1. タスクの取得 GET
