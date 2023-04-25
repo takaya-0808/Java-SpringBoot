@@ -1,13 +1,14 @@
 package com.example.todo.model;
 
-import java.util.Date;
+// import java.util.Date;
+import java.sql.Date;
 
 public class Todo {
 
     private int id;
     private String title;
     private String content;
-    // private Date createDateTime;
+    private Date createDateTime;
     // private Date updateDateTime;
     private Boolean completed;
 
@@ -35,13 +36,13 @@ public class Todo {
         this.content = content;
     }
 
-    // public Date getCreateDateTime() {
-    //     return this.createDateTime;
-    // }
+    public Date getCreateDateTime() {
+        return this.createDateTime;
+    }
 
-    // public void setCreateDateTime(Date time) {
-    //     this.createDateTime = time;
-    // }
+    public void setCreateDateTime(Date time) {
+        this.createDateTime = time;
+    }
 
     // public Date getUpdateDateTime() {
     //     return this.updateDateTime;
