@@ -1,16 +1,24 @@
 package com.example.todo.model;
 
 // import java.util.Date;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 public class Todo {
 
     private int id;
     private String title;
     private String content;
-    private Date createDateTime;
+    private Timestamp createDateTime;
     // private Date updateDateTime;
     private Boolean completed;
+
+    public Todo(int id, String title, String content, Timestamp createDateTime Boolean completed) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.createDateTime = createDateTime;
+        this.completed = completed;
+    }
 
     public int getId() {
         return this.id;
@@ -36,11 +44,11 @@ public class Todo {
         this.content = content;
     }
 
-    public Date getCreateDateTime() {
+    public Timestamp getCreateDateTime() {
         return this.createDateTime;
     }
 
-    public void setCreateDateTime(Date time) {
+    public void setCreateDateTime(Timestamp time) {
         this.createDateTime = time;
     }
 
