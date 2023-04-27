@@ -15,7 +15,7 @@ import com.example.todo.model.Todo;
 public class TodoRepositoryImpl implements TodoRepository {
 
     @Autowired
-    JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     @Override
     public Todo findById(int id) {
@@ -23,8 +23,8 @@ public class TodoRepositoryImpl implements TodoRepository {
     }
 
     @Override
-    public int saveTask(Todo todo) {
-        return jdbcTemplate.update("insert into todo(title, content, completed) values(?, ?, ?)", new Object[] {todo.getTitle(), todo.getContent(), todo.getCompleted()});
+    public int save(Todo todo) {
+        return jdbcTemplate.update("insert into todo(title, content, completed, create_ad) values(?, ?, ?, ?)", new Object[] {todo.getTitle(), todo.getContent(), todo.getCompleted(), todo.getCreateDateTime()});
     }
 
     @Override
@@ -34,12 +34,12 @@ public class TodoRepositoryImpl implements TodoRepository {
     }
 
     @Override
-    public int editTask(Todo todo, int id) {
-        return jdbcTemplate.update("update todo set title=?, content=?, completed=? where id=?", new Object[] {todo.getTitle(), todo.getContent(), todo.getCompleted(), id});
+    public int edit(Todo todo, int id) {
+        return jdbcTemplate.update("update todo set title=?, content=?, completed=?, create_ad=?  where id=?", new Object[] {todo.getTitle(), todo.getContent(), todo.getCompleted(), todo.getCreateDateTime(), id});
     }
 
     @Override
-    public int deleteTask(int id) {
+    public int delete(int id) {
         return jdbcTemplate.update("delete from todo where id=?", id);
     }
 
