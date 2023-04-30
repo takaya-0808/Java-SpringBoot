@@ -9,14 +9,15 @@ public class Todo {
     private String title;
     private String content;
     private Timestamp createDateTime;
-    // private Date updateDateTime;
+    private Date updateDateTime;
     private Boolean completed;
 
-    public Todo(int id, String title, String content, Timestamp createDateTime Boolean completed) {
+    public Todo(int id, String title, String content, Timestamp createDateTime, Timestamp updateDateTime Boolean completed) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.createDateTime = createDateTime;
+        this.updateDateTime = updateDateTime
         this.completed = completed;
     }
 
@@ -52,13 +53,13 @@ public class Todo {
         this.createDateTime = time;
     }
 
-    // public Date getUpdateDateTime() {
-    //     return this.updateDateTime;
-    // }
+    public Timestamp getUpdateDateTime() {
+        return this.updateDateTime;
+    }
 
-    // public void setUpdateDateTime(Date time) {
-    //     this.updateDateTime = time;
-    // }
+    public void setUpdateDateTime(Timestamp time) {
+        this.updateDateTime = time;
+    }
 
     public Boolean getCompleted() {
         return this.completed;
