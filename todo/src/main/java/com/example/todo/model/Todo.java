@@ -9,15 +9,17 @@ public class Todo {
     private String title;
     private String content;
     private Timestamp createDateTime;
-    private Date updateDateTime;
+    private Timestamp updateDateTime;
     private Boolean completed;
 
-    public Todo(int id, String title, String content, Timestamp createDateTime, Timestamp updateDateTime Boolean completed) {
+    public Todo() {}
+
+    public Todo(int id, String title, String content, Timestamp createDateTime, Timestamp updateDateTime, Boolean completed) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.createDateTime = createDateTime;
-        this.updateDateTime = updateDateTime
+        this.updateDateTime = updateDateTime;
         this.completed = completed;
     }
 
